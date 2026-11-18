@@ -1,0 +1,1479 @@
+{
+ "schema": "classroom-assets/lock@1",
+ "game": "fun-friday-game",
+ "library": {
+  "repo": "alexstavrev-ctrl/classroom-assets",
+  "commit": "f79e4deba61faf986687d99d82c122c33965a3ce"
+ },
+ "approved_baseline": {
+  "ref": "origin/gh-pages",
+  "commit": "abcd282",
+  "version": "V17.1 (= V16 pictures)",
+  "note": "Live version Alex approved; compare with --baseline-git origin/gh-pages"
+ },
+ "note": "Every picture, sound and font in this game must be listed here and come from classroom-assets. Run assets.py check before every publish.",
+ "ignore": [],
+ "files": {
+  "assets/apple.png": {
+   "asset": "picture.apple",
+   "version": 1,
+   "lib": "images/pictures/apple.png",
+   "sha256": "f15b3483561abd3c800b9d833a1677efa01899347e213ec4d99e6717603d3910",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'apple'",
+   "screens": "7 (inside Fruit sign), 9 (aisle)"
+  },
+  "assets/ball.png": {
+   "asset": "picture.ball",
+   "version": 1,
+   "lib": "images/pictures/ball.png",
+   "sha256": "edeb2ffed5ec2e248a9e1f8c0222e8333413a29eeb390b6b0eefe80424a15d2f",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'ball'",
+   "screens": "7 (inside Toys sign), 11 (money)"
+  },
+  "assets/banana.png": {
+   "asset": "picture.banana",
+   "version": 1,
+   "lib": "images/pictures/banana.png",
+   "sha256": "00c7ab31b871b772faccf4b213acef25b4455dc69db9c1d6541eff989d6a9160",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'banana'",
+   "screens": "7 (sign), 9 (aisle), 11 (money)"
+  },
+  "assets/bill1.png": {
+   "asset": "money.bill1",
+   "version": 1,
+   "lib": "images/money/bill1.png",
+   "sha256": "884c5321f34bfd936ed7dffe3a93f3e5fa7e37b6431fdf5cf14cf67c42eab992",
+   "px": [
+    431,
+    200
+   ],
+   "ref": "'bill1'",
+   "screens": "10-11 (money)"
+  },
+  "assets/bill5.png": {
+   "asset": "money.bill5",
+   "version": 1,
+   "lib": "images/money/bill5.png",
+   "sha256": "943128ec41d473354d2a7a75d2ed9e79436b983feb3a529442b9f0fe61ae521d",
+   "px": [
+    469,
+    203
+   ],
+   "ref": "'bill5'",
+   "screens": "10-11 (money)"
+  },
+  "assets/bread.png": {
+   "asset": "picture.bread",
+   "version": 1,
+   "lib": "images/pictures/bread.png",
+   "sha256": "85613a78c087b01c1b387f365e50500036a778bb3bdf8b42bb541ad647d1e7df",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'bread'",
+   "screens": "7 (inside Bakery sign)"
+  },
+  "assets/buckle.png": {
+   "asset": "picture.buckle",
+   "version": 1,
+   "lib": "images/pictures/buckle.png",
+   "sha256": "4eb5fccf97c439eac57edd15f5073fa00bc624ff989eb2ef7d9b1f21fb0afe20",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'buckle'",
+   "screens": "5 (bus safety)"
+  },
+  "assets/bus.png": {
+   "asset": "picture.bus",
+   "version": 1,
+   "lib": "images/pictures/bus.png",
+   "sha256": "35996af89b948f4cebc8cba4e09ef0ed71a07a5fd3210d74ffce18b000696e71",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'bus'",
+   "screens": "4 (bus stop to Walmart)"
+  },
+  "assets/cart.png": {
+   "asset": "picture.cart",
+   "version": 1,
+   "lib": "images/pictures/cart.png",
+   "sha256": "613b3a29604e7e626693c6c4d447f5123ad9a4807160ca14d073915aad84c25b",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'cart'",
+   "screens": "in the page picture list; not on a V16 screen"
+  },
+  "assets/cheeseburger-solid.png": {
+   "asset": "picture.cheeseburger-solid",
+   "version": 1,
+   "lib": "images/pictures/cheeseburger-solid.png",
+   "sha256": "602a043447274ae68c2476a1481835e5b672740edec57ce0c2c6522f41bb678c",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'cheeseburger'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/cheeseburger.png": {
+   "asset": "picture.cheeseburger",
+   "version": 1,
+   "lib": "images/pictures/cheeseburger.png",
+   "sha256": "926e56f76fe146c3cab25c1009057352b56ec9cb32557046179c2ec010b562e5",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'cheeseburger'",
+   "screens": "13 (order)"
+  },
+  "assets/chickenbowl-solid.png": {
+   "asset": "picture.chickenbowl-solid",
+   "version": 1,
+   "lib": "images/pictures/chickenbowl-solid.png",
+   "sha256": "c31868824931d304d48f49db5bd78cd8a687a8e284ae8c5004e1fb291cd86ef2",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'chickenbowl'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/chickenbowl.png": {
+   "asset": "picture.chickenbowl",
+   "version": 1,
+   "lib": "images/pictures/chickenbowl.png",
+   "sha256": "acfa3913de1ee502f12501374bb4a5cd51be575839a8a035f2a1d8fc15dc8e0c",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'chickenbowl'",
+   "screens": "13 (order)"
+  },
+  "assets/chickensandwich-solid.png": {
+   "asset": "picture.chickensandwich-solid",
+   "version": 1,
+   "lib": "images/pictures/chickensandwich-solid.png",
+   "sha256": "36c6589181be2d8adac471aba8938322b765355671e2491e7ac97ac81de3f0e2",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'chickensandwich'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/chickensandwich.png": {
+   "asset": "picture.chickensandwich",
+   "version": 1,
+   "lib": "images/pictures/chickensandwich.png",
+   "sha256": "d361fd6a0a711cf850faa9bf56b672de57b0b18731cb1627fa8380cac250b379",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'chickensandwich'",
+   "screens": "13 (order)"
+  },
+  "assets/chips-solid.png": {
+   "asset": "picture.chips-solid",
+   "version": 1,
+   "lib": "images/pictures/chips-solid.png",
+   "sha256": "813a1b7bffb98b45e23665cabdbfc9e63dca73c03e6b91df6d85320b69f04835",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'chips'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/chips.png": {
+   "asset": "picture.chips",
+   "version": 1,
+   "lib": "images/pictures/chips.png",
+   "sha256": "ef8137966bff0c85c2ac1c8375f43703882669a30ca058d59b78147dd1e9cb8a",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'chips'",
+   "screens": "13 (order)"
+  },
+  "assets/chowmein-solid.png": {
+   "asset": "picture.chowmein-solid",
+   "version": 1,
+   "lib": "images/pictures/chowmein-solid.png",
+   "sha256": "bd564e60a2bf4ccc557f8b7007b9f9b0bd2ae4dc768ac55951fca6fe14313af1",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'chowmein'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/chowmein.png": {
+   "asset": "picture.chowmein",
+   "version": 1,
+   "lib": "images/pictures/chowmein.png",
+   "sha256": "dc8ee0d6ca8fb9ef1fe1b8fe443b35cb90553be0af9aeb6d6f4670c85397ea81",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'chowmein'",
+   "screens": "13 (order)"
+  },
+  "assets/clockface.png": {
+   "asset": "picture.clockface",
+   "version": 1,
+   "lib": "images/pictures/clockface.png",
+   "sha256": "ae12ffa5cdd0c40b4fc7ea6ac09b7952f2b53683d55230f4bd896ba6d0734dd5",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "clockface.png",
+   "screens": "1 (clock), end card"
+  },
+  "assets/cubmeal-solid.png": {
+   "asset": "picture.cubmeal-solid",
+   "version": 1,
+   "lib": "images/pictures/cubmeal-solid.png",
+   "sha256": "77d824648d4e6437bbeb0e4f1745453be8a7e5e54f11cf823e28896ee8fae8b2",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'cubmeal'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/cubmeal.png": {
+   "asset": "picture.cubmeal",
+   "version": 1,
+   "lib": "images/pictures/cubmeal.png",
+   "sha256": "ca72c635621a155a10544871789f85a48107a25bcfe5a625d9158d028f6a81df",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'cubmeal'",
+   "screens": "13 (order)"
+  },
+  "assets/cupcake.png": {
+   "asset": "picture.cupcake",
+   "version": 1,
+   "lib": "images/pictures/cupcake.png",
+   "sha256": "523afa6147aee3940109b1fd16127713c4f3f938379c289d0e2bcc9228872c93",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'cupcake'",
+   "screens": "in the page picture list; not on a V16 screen"
+  },
+  "assets/dinosaur.png": {
+   "asset": "picture.dinosaur",
+   "version": 1,
+   "lib": "images/pictures/dinosaur.png",
+   "sha256": "df729fb48a17d2e4f224a4c8ad2a4ed1b02e563c69d53130c2b6ffdd184120b9",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'dinosaur'",
+   "screens": "2 (school to bus stop)"
+  },
+  "assets/elephant.png": {
+   "asset": "picture.elephant",
+   "version": 1,
+   "lib": "images/pictures/elephant.png",
+   "sha256": "6fd18103fb778fafa852b4bacccfcba8fcfc3abc4e92e1932c472a3e2135df48",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'elephant'",
+   "screens": "4 (bus stop to Walmart)"
+  },
+  "assets/facades.webp": {
+   "asset": "scene.lunch-street-facades",
+   "version": 3,
+   "lib": "images/scenes/lunch-street-facades/facades.webp",
+   "sha256": "5b8e650953c93ab0b7593b1bbbfe02f086bb3b87a74d0257256034e12811de12",
+   "px": [
+    1870,
+    841
+   ],
+   "ref": "facades.webp",
+   "screens": "12 (where to eat)"
+  },
+  "assets/fonts/Baloo2-600.woff2": {
+   "asset": "font.baloo-2",
+   "version": 1,
+   "lib": "fonts/baloo-2/Baloo2-latin-variable.woff2",
+   "sha256": "2e9420db49d01d76a7b8a38ef22ec9c45305d9f15fafa370389b7bf467658fc3",
+   "px": null,
+   "ref": "assets/fonts/Baloo2-600.woff2",
+   "screens": "all screens (display text)"
+  },
+  "assets/fonts/Baloo2-800.woff2": {
+   "asset": "font.baloo-2",
+   "version": 1,
+   "lib": "fonts/baloo-2/Baloo2-latin-variable.woff2",
+   "sha256": "2e9420db49d01d76a7b8a38ef22ec9c45305d9f15fafa370389b7bf467658fc3",
+   "px": null,
+   "ref": "assets/fonts/Baloo2-800.woff2",
+   "screens": "all screens (display text)"
+  },
+  "assets/fonts/Nunito-700.woff2": {
+   "asset": "font.nunito",
+   "version": 1,
+   "lib": "fonts/nunito/Nunito-latin-variable.woff2",
+   "sha256": "20fc9b6fc618e7c3c68d3ac750a2a5dfbceb8521675458d2cea580b5693e4798",
+   "px": null,
+   "ref": "assets/fonts/Nunito-700.woff2",
+   "screens": "all screens (body text)"
+  },
+  "assets/fonts/Nunito-800.woff2": {
+   "asset": "font.nunito",
+   "version": 1,
+   "lib": "fonts/nunito/Nunito-latin-variable.woff2",
+   "sha256": "20fc9b6fc618e7c3c68d3ac750a2a5dfbceb8521675458d2cea580b5693e4798",
+   "px": null,
+   "ref": "assets/fonts/Nunito-800.woff2",
+   "screens": "all screens (body text)"
+  },
+  "assets/gamepad.png": {
+   "asset": "picture.gamepad",
+   "version": 1,
+   "lib": "images/pictures/gamepad.png",
+   "sha256": "2d9de3765ff1a52c8888135c8e8d2bed133b0df16c48f4e6bfa3c9413dff9aed",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'gamepad'",
+   "screens": "11 (money)"
+  },
+  "assets/grapes.png": {
+   "asset": "picture.grapes",
+   "version": 1,
+   "lib": "images/pictures/grapes.png",
+   "sha256": "b58c53c4549ea078cb1967c1406bf9a2d9c9aeb1005b60dc12b823e0b50f7dd1",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'grapes'",
+   "screens": "9 (fruit aisle)"
+  },
+  "assets/jeans.png": {
+   "asset": "picture.jeans",
+   "version": 1,
+   "lib": "images/pictures/jeans.png",
+   "sha256": "f5ee4feb929543a2cbdf601e20a19fafb2ccfb767628ca7203b02cf2ec43ce33",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'jeans'",
+   "screens": "in the page picture list; not on a V16 screen"
+  },
+  "assets/maccheese-solid.png": {
+   "asset": "picture.maccheese-solid",
+   "version": 1,
+   "lib": "images/pictures/maccheese-solid.png",
+   "sha256": "26b383d96751460cba20e8604f73edaef69eb63634811af325b1b1c407c9bc89",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'maccheese'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/maccheese.png": {
+   "asset": "picture.maccheese",
+   "version": 1,
+   "lib": "images/pictures/maccheese.png",
+   "sha256": "b1f623af2bb5bca8246af51959639285c88cb1891a8d9ff00e0c8450f95d804d",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'maccheese'",
+   "screens": "13 (order)"
+  },
+  "assets/meatballsub.png": {
+   "asset": "picture.meatballsub",
+   "version": 1,
+   "lib": "images/pictures/meatballsub.png",
+   "sha256": "3f1f53d3e81a6f7e546bfc1da575f0c5dabee366bbed9a355aa0d277642b9fe7",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'meatballsub'",
+   "screens": "in the page picture list; not on a V16 screen"
+  },
+  "assets/nuggets-solid.png": {
+   "asset": "picture.nuggets-solid",
+   "version": 1,
+   "lib": "images/pictures/nuggets-solid.png",
+   "sha256": "df19aefa3f4e1f03507c56b39a186a9a30a0d0a56b1949fecf5002939b7a9715",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'nuggets'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/nuggets.png": {
+   "asset": "picture.nuggets",
+   "version": 1,
+   "lib": "images/pictures/nuggets.png",
+   "sha256": "d433c4aa913d6b873948461abab511b05f8eb7fe9349583628171205967c4122",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'nuggets'",
+   "screens": "13 (order)"
+  },
+  "assets/opening-draft.webp": {
+   "asset": "scene.fun-friday-title-draft-a",
+   "version": 1,
+   "lib": "images/scenes/fun-friday-title/fun-friday-title-draft-a.webp",
+   "sha256": "3ad06fed2564c129a65ea81e630f2e1fcc78d65b0a1be659349b25eebf5c24b7",
+   "px": [
+    1672,
+    941
+   ],
+   "ref": "opening-draft.webp",
+   "screens": "0 (title, fallback only)"
+  },
+  "assets/opening-full.webp": {
+   "asset": "scene.fun-friday-title",
+   "version": 3,
+   "lib": "images/scenes/fun-friday-title/fun-friday-title.webp",
+   "sha256": "5dc4c30ab99167af8aa622c97f4176c9749a5d8fac847bd4b1df2c263da4c51a",
+   "px": [
+    1920,
+    1080
+   ],
+   "ref": "opening-full.webp",
+   "screens": "0 (title)"
+  },
+  "assets/orange.png": {
+   "asset": "picture.orange",
+   "version": 1,
+   "lib": "images/pictures/orange.png",
+   "sha256": "6d200df9b29edcb33d35b24c41960c489f23cfc7e89c44cac2fc551c6b8af0fb",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'orange'",
+   "screens": "9 (fruit aisle)"
+  },
+  "assets/panda.png": {
+   "asset": "picture.panda",
+   "version": 1,
+   "lib": "images/pictures/panda.png",
+   "sha256": "0ce745ccbaa1b6412fb79aa0e9c1e9bacdc8c3d8cbb395996ef190eada36dee9",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'panda'",
+   "screens": "6 (map), 12 (lunch)"
+  },
+  "assets/papermap.png": {
+   "asset": "picture.papermap",
+   "version": 1,
+   "lib": "images/pictures/papermap.png",
+   "sha256": "9250f5cf86eafe560c61d89b91c36bfa8c52ce692f97769cf5d97f6acc0ec797",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'papermap'",
+   "screens": "in the page picture list; not on a V16 screen"
+  },
+  "assets/pasta-solid.png": {
+   "asset": "picture.pasta-solid",
+   "version": 1,
+   "lib": "images/pictures/pasta-solid.png",
+   "sha256": "e24bbb1b1f5f3218cade46434f2da320bbbee43f481b758556afc9bbff9d2faf",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'pasta'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/pasta.png": {
+   "asset": "picture.pasta",
+   "version": 1,
+   "lib": "images/pictures/pasta.png",
+   "sha256": "acbd109e4469d6e6c03e395f95641830c128f7bb1d0b80799368d3fe5e819c0a",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'pasta'",
+   "screens": "13 (order)"
+  },
+  "assets/pepper.png": {
+   "asset": "picture.pepper",
+   "version": 1,
+   "lib": "images/pictures/pepper.png",
+   "sha256": "e5a28c4fed02bec54ad43e684b3b770434145c57bf50da9ac903fc80792115b8",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'pepper'",
+   "screens": "6 (map: Chili's pin)"
+  },
+  "assets/pizza-solid.png": {
+   "asset": "picture.pizza-solid",
+   "version": 1,
+   "lib": "images/pictures/pizza-solid.png",
+   "sha256": "0bff5e5f009c52352b6f2e0beccaed40ef5df98d1e18897cfca6958bd3c019b0",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'pizza'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/pizza.png": {
+   "asset": "picture.pizza",
+   "version": 1,
+   "lib": "images/pictures/pizza.png",
+   "sha256": "86ad2126881137523184a3cc390b79d421a2e42a5f124f85aa455f85dae75749",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'pizza'",
+   "screens": "6 (map), 9 (fruit aisle), 13 (order)"
+  },
+  "assets/quiet.png": {
+   "asset": "picture.quiet",
+   "version": 1,
+   "lib": "images/pictures/quiet.png",
+   "sha256": "4e9b28fe326efa188e83be3aa73054a16ca122bc159bcf9d4698f68f603f6d02",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'quiet'",
+   "screens": "5 (bus safety)"
+  },
+  "assets/rocket.png": {
+   "asset": "picture.rocket",
+   "version": 1,
+   "lib": "images/pictures/rocket.png",
+   "sha256": "8d92e04f8dcd7c99276ca7872c005fd86ac2d9bd39e98e565c2173b1385caabf",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'rocket'",
+   "screens": "2 (school to bus stop)"
+  },
+  "assets/rollercoaster.png": {
+   "asset": "picture.rollercoaster",
+   "version": 1,
+   "lib": "images/pictures/rollercoaster.png",
+   "sha256": "aa219dcc1d41583f9dc02a61f7851b0b32785fdf2e9241f25e6d72b20b1afb79",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'rollercoaster'",
+   "screens": "6 (map)"
+  },
+  "assets/run.png": {
+   "asset": "picture.run",
+   "version": 1,
+   "lib": "images/pictures/run.png",
+   "sha256": "8f1608a3077ab42099fa932a03b8479f0068641f5acebba2087dd7e72d665397",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'run'",
+   "screens": "5 (bus safety)"
+  },
+  "assets/sailboat.png": {
+   "asset": "picture.sailboat",
+   "version": 1,
+   "lib": "images/pictures/sailboat.png",
+   "sha256": "ed55e1047fffe3db931df30d9627d026002a70301d2070c62d4573b3d00384cd",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'sailboat'",
+   "screens": "4 (bus stop to Walmart)"
+  },
+  "assets/shirt.png": {
+   "asset": "picture.shirt",
+   "version": 1,
+   "lib": "images/pictures/shirt.png",
+   "sha256": "229ae5f35381101d727d0db2d9b8928e6d59d75d693eaf2a6a3b307833cca9a6",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'shirt'",
+   "screens": "7 (inside Clothes sign)"
+  },
+  "assets/shop-burger.png": {
+   "asset": "shop.burger",
+   "version": 1,
+   "lib": "images/shops/shop-burger.png",
+   "sha256": "1f81a71574e8d7271ce0b5932fc3fa7e994c5d8f77acbdbe4ed680983ecf7017",
+   "px": [
+    640,
+    480
+   ],
+   "ref": "'shop-burger'",
+   "screens": "12 (where to eat)"
+  },
+  "assets/shop-jersey.png": {
+   "asset": "shop.jersey",
+   "version": 1,
+   "lib": "images/shops/shop-jersey.png",
+   "sha256": "c0da974a3ad3673b143685e28386072816e14869dc01fcda01658c55462916ce",
+   "px": [
+    640,
+    480
+   ],
+   "ref": "'shop-jersey'",
+   "screens": "12 (where to eat)"
+  },
+  "assets/shop-lascari.png": {
+   "asset": "shop.lascari",
+   "version": 1,
+   "lib": "images/shops/shop-lascari.png",
+   "sha256": "469d465e2ece75f86f88bb209ab1172afaed037e28f275a852aeaeafa715de51",
+   "px": [
+    640,
+    480
+   ],
+   "ref": "'shop-lascari'",
+   "screens": "12 (where to eat)"
+  },
+  "assets/shop-panda.png": {
+   "asset": "shop.panda",
+   "version": 1,
+   "lib": "images/shops/shop-panda.png",
+   "sha256": "28fb77b6be2cac4371c9b6cb1b3acfb42d7c73acb645bf63bd04f98b85c0d9aa",
+   "px": [
+    640,
+    480
+   ],
+   "ref": "'shop-panda'",
+   "screens": "12 (where to eat)"
+  },
+  "assets/shop-sub.png": {
+   "asset": "shop.sub",
+   "version": 1,
+   "lib": "images/shops/shop-sub.png",
+   "sha256": "dde17df9c481fbb128bdf8c3be4e59a85875a2b912922f837de02ba6196a0886",
+   "px": [
+    640,
+    480
+   ],
+   "ref": "'shop-sub'",
+   "screens": "in the page picture list; not on a V16 screen"
+  },
+  "assets/shoppingbag.png": {
+   "asset": "picture.shoppingbag",
+   "version": 1,
+   "lib": "images/pictures/shoppingbag.png",
+   "sha256": "dd0e749d53f90a03fe27ffd317d89b75cd62eb5b0c0f405bfaf9ffe478d41c55",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'shoppingbag'",
+   "screens": "in the page picture list; not on a V16 screen"
+  },
+  "assets/signs/s6-a.svg": {
+   "asset": "aisle-sign.s6-a",
+   "version": 1,
+   "lib": "images/aisle-signs/s6-a.svg",
+   "sha256": "448d8726ec67dc47ba7fa9c5e2e92e7e94f8580e4b37b54d5db3c3ac6f8e363e",
+   "px": [
+    400,
+    600
+   ],
+   "ref": "'s6-a'",
+   "screens": "7-8 (tap the sign)"
+  },
+  "assets/signs/s6-b.svg": {
+   "asset": "aisle-sign.s6-b",
+   "version": 1,
+   "lib": "images/aisle-signs/s6-b.svg",
+   "sha256": "79abdf9db70b3c64e79a7951b7dda752b186ae28d75ce16702e352eb66f52130",
+   "px": [
+    400,
+    600
+   ],
+   "ref": "'s6-b'",
+   "screens": "7-8 (tap the sign)"
+  },
+  "assets/signs/s6-c.svg": {
+   "asset": "aisle-sign.s6-c",
+   "version": 1,
+   "lib": "images/aisle-signs/s6-c.svg",
+   "sha256": "82e7d298c72587f907b6aee2876d5e6d00689a2eeddaf69ba2f3589437d3b9fa",
+   "px": [
+    400,
+    600
+   ],
+   "ref": "'s6-c'",
+   "screens": "7-8 (tap the sign)"
+  },
+  "assets/signs/s6-d.svg": {
+   "asset": "aisle-sign.s6-d",
+   "version": 1,
+   "lib": "images/aisle-signs/s6-d.svg",
+   "sha256": "cb018d900ea322eeca2849a74e2627624a4e8b24bafc240abea839d8a2ab0cf0",
+   "px": [
+    400,
+    600
+   ],
+   "ref": "'s6-d'",
+   "screens": "7-8 (tap the sign)"
+  },
+  "assets/signs/s7-a.svg": {
+   "asset": "aisle-sign.s7-a",
+   "version": 1,
+   "lib": "images/aisle-signs/s7-a.svg",
+   "sha256": "106208c689cfbf967759937c5f1b82f7d80abbb07b985e70c23098aeb9cfab86",
+   "px": [
+    400,
+    600
+   ],
+   "ref": "'s7-a'",
+   "screens": "7-8 (tap the sign)"
+  },
+  "assets/signs/s7-b.svg": {
+   "asset": "aisle-sign.s7-b",
+   "version": 1,
+   "lib": "images/aisle-signs/s7-b.svg",
+   "sha256": "0307a00c54118d8bac26fcc598ef0e9ea161f6e18c8b276b1cbdd3025d307b46",
+   "px": [
+    400,
+    600
+   ],
+   "ref": "'s7-b'",
+   "screens": "7-8 (tap the sign)"
+  },
+  "assets/signs/s7-c.svg": {
+   "asset": "aisle-sign.s7-c",
+   "version": 1,
+   "lib": "images/aisle-signs/s7-c.svg",
+   "sha256": "18fca488dc36690ff301ce447d0a9db31cb8c641edd3610579508bbe238405c3",
+   "px": [
+    400,
+    600
+   ],
+   "ref": "'s7-c'",
+   "screens": "7-8 (tap the sign)"
+  },
+  "assets/signs/s7-d.svg": {
+   "asset": "aisle-sign.s7-d",
+   "version": 1,
+   "lib": "images/aisle-signs/s7-d.svg",
+   "sha256": "23b2d086dabceb5c0406848150ab12ee2b2661aa686b6b07560a1cf3ee4f99a2",
+   "px": [
+    400,
+    600
+   ],
+   "ref": "'s7-d'",
+   "screens": "7-8 (tap the sign)"
+  },
+  "assets/skateboard.png": {
+   "asset": "picture.skateboard",
+   "version": 1,
+   "lib": "images/pictures/skateboard.png",
+   "sha256": "5cb7c33447508533bf519a325db9e2b74cf77aba8cbcc9c572ff3eff65c77a73",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'skateboard'",
+   "screens": "4 (bus stop to Walmart)"
+  },
+  "assets/socks.png": {
+   "asset": "picture.socks",
+   "version": 1,
+   "lib": "images/pictures/socks.png",
+   "sha256": "6f201b18fc040871ec178116a076fcc3faa7822d5818e75c6295c36d4eda061b",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'socks'",
+   "screens": "9 (fruit aisle)"
+  },
+  "assets/soda-solid.png": {
+   "asset": "picture.soda-solid",
+   "version": 1,
+   "lib": "images/pictures/soda-solid.png",
+   "sha256": "b7c0ed1f2a2f2e0aa5e2e6509d0a0dd73b2975ac1b56586c19c373efe409d4b8",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'soda'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/soda.png": {
+   "asset": "picture.soda",
+   "version": 1,
+   "lib": "images/pictures/soda.png",
+   "sha256": "6b128c3b7ec0e60c3a5d22c208e7175a4d40e26422bdb1e084fb0654d447746e",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'soda'",
+   "screens": "13 (order)"
+  },
+  "assets/star.png": {
+   "asset": "picture.star",
+   "version": 1,
+   "lib": "images/pictures/star.png",
+   "sha256": "5f57b401380827c7134438742b133500bfcd7bdb591d1ac1cabb0657a85d8aa4",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'star'",
+   "screens": "right-answer star on every screen"
+  },
+  "assets/stop/pic-cone.webp": {
+   "asset": "stop.cone",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-cone.webp",
+   "sha256": "07bc9a354c63f3d4671ed452ef0ce055b77759d79b776fa1b73532b35e5bee0e",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'cone'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-crosswalk.webp": {
+   "asset": "stop.crosswalk",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-crosswalk.webp",
+   "sha256": "2e6f6a465e8aabf8d18abfe8c216d0b327284a3fc7aa4dd05020d0a622493f76",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'crosswalk'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-curb-ramp.webp": {
+   "asset": "stop.curb-ramp",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-curb-ramp.webp",
+   "sha256": "ca7f3ea69096a9c0e7eb31ed102f4f9088003e0f9b0041b4bb88c338f8efde3a",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'curb-ramp'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-dont-walk.webp": {
+   "asset": "stop.dont-walk",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-dont-walk.webp",
+   "sha256": "f6d20200acb47bf45fb49866a0bad7d7dcf092a97da60b1fe9bce6e2e421d5da",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'dont-walk'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-hydrant.webp": {
+   "asset": "stop.hydrant",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-hydrant.webp",
+   "sha256": "398c5aa193b4d32e26c31656b8af98bca9581cc8562c97df501899e9b9d1911b",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'hydrant'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-pedestrian-crossing.webp": {
+   "asset": "stop.pedestrian-crossing",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-pedestrian-crossing.webp",
+   "sha256": "989c7eb1ab0b110e3497c0877ac6bc8e35daeeb12d7c2a2709c96117b0fb38fc",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'pedestrian-crossing'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-school-crossing.webp": {
+   "asset": "stop.school-crossing",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-school-crossing.webp",
+   "sha256": "a7d93bb9d861c13545cbfc007dd9b6d1c74d2343a28b12830568b1502da2eeb8",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'school-crossing'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-speed-limit.webp": {
+   "asset": "stop.speed-limit",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-speed-limit.webp",
+   "sha256": "3354c0813d5f3e2889d333f4eb2ff1c1cafd8d15856334bb263ab21ae9b23ea9",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'speed-limit'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-stop-front.webp": {
+   "asset": "stop.stop-front",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-stop-front.webp",
+   "sha256": "24e1f5579a6947ba2e39622e66b227911fb71c8cf6149faf4a5ca873df49b7ce",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'stop-front'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-stop-large.webp": {
+   "asset": "stop.stop-large",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-stop-large.webp",
+   "sha256": "d3cc25e3538c4aa58a971d038c9fcba04032f0ed2a8fe7bb785b03bf802cbbe5",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'stop-large'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-stop-left.webp": {
+   "asset": "stop.stop-left",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-stop-left.webp",
+   "sha256": "cb22b2e46f3e7157cda939439af112241c5d32402807e22f4e5bc86374048d97",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'stop-left'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-stop-right.webp": {
+   "asset": "stop.stop-right",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-stop-right.webp",
+   "sha256": "82c64e0d0654ddb0ceea3f50c00fba9bd932377ed6444bc9ae8ac4299355bd94",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'stop-right'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-stop-short.webp": {
+   "asset": "stop.stop-short",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-stop-short.webp",
+   "sha256": "1f4c35a782382a7d6cf4daab441d6b519c6315695a140e0b0867113d6bb99555",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'stop-short'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-traffic-light.webp": {
+   "asset": "stop.traffic-light",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-traffic-light.webp",
+   "sha256": "ae6e7527b2c5f269f860c085fe7204192333d69ae8dc1859d38141273ccba3f9",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'traffic-light'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-walk-signal.webp": {
+   "asset": "stop.walk-signal",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-walk-signal.webp",
+   "sha256": "71ebb7cccd23360fdcf98f97fb630c410716931da6d8027ad7aa28944e5fd07b",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'walk-signal'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/stop/pic-yield.webp": {
+   "asset": "stop.yield",
+   "version": 1,
+   "lib": "images/stop-page/web/pic-yield.webp",
+   "sha256": "06efb5a5b461736225107c2a5ac4e5cc05a91f1ecaf75e8d92fc2ffbd5719bd4",
+   "px": [
+    400,
+    400
+   ],
+   "ref": "'yield'",
+   "screens": "3 (tap every STOP sign)"
+  },
+  "assets/store.png": {
+   "asset": "picture.store",
+   "version": 1,
+   "lib": "images/pictures/store.png",
+   "sha256": "cdd77d663ef539e7d26be2433b17a7182ed2ccedc8b25c9b77cb041177a97b3e",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'store'",
+   "screens": "6 (map: places we will see)"
+  },
+  "assets/swim.png": {
+   "asset": "picture.swim",
+   "version": 1,
+   "lib": "images/pictures/swim.png",
+   "sha256": "32a02b5773b2929aa437547d43c389703a3b700b67def0cb722c7ac761e3d6b4",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'swim'",
+   "screens": "2 (school to bus stop)"
+  },
+  "assets/teddy.png": {
+   "asset": "picture.teddy",
+   "version": 1,
+   "lib": "images/pictures/teddy.png",
+   "sha256": "38de676461b4a95ab53a7ffc0e27916ad54ff532ae45a913860a6649c5765f70",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'teddy'",
+   "screens": "8 (sign), 9 (aisle), 10-11 (money)"
+  },
+  "assets/title/aisle.webp": {
+   "asset": "title.piece-aisle",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/aisle.webp",
+   "sha256": "58080658f23f1e07d72c20543b288a14a4ef246f2a06a98b8223c20be6b59da2",
+   "px": [
+    450,
+    360
+   ],
+   "ref": "'aisle'",
+   "screens": ""
+  },
+  "assets/title/apple.webp": {
+   "asset": "title.piece-apple",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/apple.webp",
+   "sha256": "a63080ec45a7089cfdd5025dce3531936011ad4eaf8b964bb0d476b6fb439cd3",
+   "px": [
+    364,
+    426
+   ],
+   "ref": "'apple'",
+   "screens": ""
+  },
+  "assets/title/bag.webp": {
+   "asset": "title.piece-bag",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/bag.webp",
+   "sha256": "e55030bebd64e3bcedac06aa3f1258f25c2c32aaece32f26f6f609994d81415b",
+   "px": [
+    406,
+    462
+   ],
+   "ref": "'bag'",
+   "screens": ""
+  },
+  "assets/title/bananas.webp": {
+   "asset": "title.piece-bananas",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/bananas.webp",
+   "sha256": "1f9db766626a37bd800ae0ef2178cc9334223b2c6ed7eab239a4b26b8ec1a198",
+   "px": [
+    406,
+    364
+   ],
+   "ref": "'bananas'",
+   "screens": ""
+  },
+  "assets/title/bill.webp": {
+   "asset": "title.piece-bill",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/bill.webp",
+   "sha256": "23c0c362f1dbf1de65c52b29651539d0ba535374584b67ae5309585c44c6d971",
+   "px": [
+    358,
+    244
+   ],
+   "ref": "'bill'",
+   "screens": ""
+  },
+  "assets/title/burger.webp": {
+   "asset": "title.piece-burger",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/burger.webp",
+   "sha256": "b5fd868a608407bc6236fd6166ddec22340391916052ccabbbd48b03eeb0e3ae",
+   "px": [
+    450,
+    376
+   ],
+   "ref": "'burger'",
+   "screens": ""
+  },
+  "assets/title/bus.webp": {
+   "asset": "title.bus-v16",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/bus.webp",
+   "sha256": "07d1880126b153811a7c1a1ab2cc7c506de30d49276a249b3fd328a8ca28c693",
+   "px": [
+    975,
+    437
+   ],
+   "ref": "'bus'",
+   "screens": ""
+  },
+  "assets/title/chowmein.webp": {
+   "asset": "title.piece-chowmein",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/chowmein.webp",
+   "sha256": "dbbd629c7e2a0e54248a8b4c53d02e4a780a9d0184cd1eed8e14bab982c5d7d7",
+   "px": [
+    494,
+    360
+   ],
+   "ref": "'chowmein'",
+   "screens": ""
+  },
+  "assets/title/coin-copper.webp": {
+   "asset": "title.piece-coin-copper",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/coin-copper.webp",
+   "sha256": "d5e3d01dea53c448b7b135cc16844c7afea7f04328100493d39ef7ed925bdc16",
+   "px": [
+    180,
+    180
+   ],
+   "ref": "'coin-copper'",
+   "screens": ""
+  },
+  "assets/title/coin-silver-1.webp": {
+   "asset": "title.piece-coin-silver-1",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/coin-silver-1.webp",
+   "sha256": "0ab33d372cd5d840ecec90d5896aec856fb946d98d931040a40d1da71cfd02a3",
+   "px": [
+    216,
+    216
+   ],
+   "ref": "'coin-silver-1'",
+   "screens": ""
+  },
+  "assets/title/coin-silver-2.webp": {
+   "asset": "title.piece-coin-silver-2",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/coin-silver-2.webp",
+   "sha256": "3b213817d98231119eee8f06d8f5dcaf61236af5a527a975a518c8b3fb8cf23c",
+   "px": [
+    190,
+    198
+   ],
+   "ref": "'coin-silver-2'",
+   "screens": ""
+  },
+  "assets/title/fries.webp": {
+   "asset": "title.piece-fries",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/fries.webp",
+   "sha256": "b7be00578491f5640199731e7c6e1fc12d75645d3b002faa3730f149e5c43ac7",
+   "px": [
+    360,
+    420
+   ],
+   "ref": "'fries'",
+   "screens": ""
+  },
+  "assets/title/map-bg.webp": {
+   "asset": "title.map-full",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/map-bg.webp",
+   "sha256": "5a039b35d6ed6eb16c91be62a8b07b85cd8c395cb030c802ff84b080d69da532",
+   "px": [
+    1920,
+    1080
+   ],
+   "ref": "'map-bg'",
+   "screens": ""
+  },
+  "assets/title/nuggets.webp": {
+   "asset": "title.piece-nuggets",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/nuggets.webp",
+   "sha256": "5b4df79bbc5422f850337142d7beef991b661b65d071be19a885cd6d6447d9b4",
+   "px": [
+    468,
+    424
+   ],
+   "ref": "'nuggets'",
+   "screens": ""
+  },
+  "assets/title/pizza.webp": {
+   "asset": "title.piece-pizza",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/pizza.webp",
+   "sha256": "82cdd518125be7eca900192b86093c7e9aaf7449556d3a0c233664d21951db05",
+   "px": [
+    372,
+    428
+   ],
+   "ref": "'pizza'",
+   "screens": ""
+  },
+  "assets/title/receipt.webp": {
+   "asset": "title.piece-receipt",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/receipt.webp",
+   "sha256": "9bccbfd9eb227e6c44838c9e77bad5184ff8c73df583664a0c07ef8e79930b53",
+   "px": [
+    446,
+    456
+   ],
+   "ref": "'receipt'",
+   "screens": ""
+  },
+  "assets/title/soda.webp": {
+   "asset": "title.piece-soda",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/soda.webp",
+   "sha256": "1aa8c49f065086e8598fbbcf3ff97bdef7855b5b33d19ec008a84f2f52ad09de",
+   "px": [
+    314,
+    504
+   ],
+   "ref": "'soda'",
+   "screens": ""
+  },
+  "assets/title/stop.webp": {
+   "asset": "title.piece-stop",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/stop.webp",
+   "sha256": "f7a5da823f604ff0992650927b76521677f1a25b1852f2ee04a677dc2e76ab88",
+   "px": [
+    360,
+    474
+   ],
+   "ref": "'stop'",
+   "screens": ""
+  },
+  "assets/title/sub.webp": {
+   "asset": "title.piece-sub",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/sub.webp",
+   "sha256": "7cd8cada966317d93241db51caf1ba303279ae4c538cc7a8e24c67c4625684fa",
+   "px": [
+    498,
+    296
+   ],
+   "ref": "'sub'",
+   "screens": ""
+  },
+  "assets/title/teddy.webp": {
+   "asset": "title.piece-teddy",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/teddy.webp",
+   "sha256": "54065a0225643cf77bb85b5af0a0cb9a2b88638506ab621b29c482a51b0aac81",
+   "px": [
+    406,
+    456
+   ],
+   "ref": "'teddy'",
+   "screens": ""
+  },
+  "assets/title/walk.webp": {
+   "asset": "title.piece-walk",
+   "version": 1,
+   "lib": "images/title-pieces/cut/web/walk.webp",
+   "sha256": "758c23013ca3d50ef637800a13d66cbc2eab9c3850663e179f2f4d9db1f98bfc",
+   "px": [
+    434,
+    326
+   ],
+   "ref": "'walk'",
+   "screens": ""
+  },
+  "assets/toothbrush.png": {
+   "asset": "picture.toothbrush",
+   "version": 1,
+   "lib": "images/pictures/toothbrush.png",
+   "sha256": "f47ac945260aaaa2efbc4fbd795fb73686af51ae90f09201adad51ed961448e2",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'toothbrush'",
+   "screens": "9 (fruit aisle)"
+  },
+  "assets/tray-row.webp": {
+   "asset": "scene.lunch-tray-row",
+   "version": 1,
+   "lib": "images/scenes/lunch-tray-row/tray-row.webp",
+   "sha256": "6541949f5dde99f6900a14b067167a33845647f6a4ab1677a87375da1b2bf788",
+   "px": [
+    2172,
+    543
+   ],
+   "ref": "tray-row.webp",
+   "screens": "14 (bill tray)"
+  },
+  "assets/turkeysub-solid.png": {
+   "asset": "picture.turkeysub-solid",
+   "version": 1,
+   "lib": "images/pictures/turkeysub-solid.png",
+   "sha256": "3842493c8ff8b6582a9c905740deb1867bacf0dee787db76f616a4faf251b16c",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'turkeysub'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/turkeysub.png": {
+   "asset": "picture.turkeysub",
+   "version": 1,
+   "lib": "images/pictures/turkeysub.png",
+   "sha256": "6cfd99640bd1c974baab5b040b1fb89804844236619f2850bc89e7ceb35d81e6",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'turkeysub'",
+   "screens": "13 (order)"
+  },
+  "assets/veggiesub-solid.png": {
+   "asset": "picture.veggiesub-solid",
+   "version": 1,
+   "lib": "images/pictures/veggiesub-solid.png",
+   "sha256": "fbde3544a5e4692c2494ee2c819323abedd7750bcc49edf5d9f8d8fd0ab65801",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'veggiesub'",
+   "screens": "14 (bill tray)"
+  },
+  "assets/veggiesub.png": {
+   "asset": "picture.veggiesub",
+   "version": 1,
+   "lib": "images/pictures/veggiesub.png",
+   "sha256": "beed336ec984194474d2e88cb0848ff8aa056dc20e3742f2cf21bb3bec54133d",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'veggiesub'",
+   "screens": "13 (order)"
+  },
+  "assets/walk.png": {
+   "asset": "picture.walk",
+   "version": 1,
+   "lib": "images/pictures/walk.png",
+   "sha256": "2c9405bbda791c1162675ae3a0f0412019b21a9c7e319ff8b6547f0bcf00b5d7",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'walk'",
+   "screens": "2 (school to bus stop)"
+  },
+  "assets/yell.png": {
+   "asset": "picture.yell",
+   "version": 1,
+   "lib": "images/pictures/yell.png",
+   "sha256": "8b3de5adb5729da90664cfa6b5aaeeed092d52a0b7e40944b2124a87d3803708",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'yell'",
+   "screens": "5 (bus safety)"
+  },
+  "assets/yoyo.png": {
+   "asset": "picture.yoyo",
+   "version": 1,
+   "lib": "images/pictures/yoyo.png",
+   "sha256": "c74e0859b157e7ec9f67a6e1439a66a747e85be410d41b95e4d6907f1cf51854",
+   "px": [
+    512,
+    512
+   ],
+   "ref": "'yoyo'",
+   "screens": "in the page picture list; not on a V16 screen"
+  }
+ },
+ "inline": [
+  {
+   "asset": "scene.plaza-map",
+   "lib": "images/scenes/plaza-map/map2.svg",
+   "in": "index.html",
+   "screens": "6 (map)"
+  }
+ ],
+ "removed": []
+}
