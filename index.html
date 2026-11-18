@@ -1,6 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Fun Friday on a Wednesday</title>
-<!-- v17: floating title + tactile buttons -->
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
 @font-face {
@@ -243,32 +242,6 @@ main.billq .receipt:has(.rrow+.rrow+.rrow+.rrow){--u:calc(min(1vh,.5625vw)*.85)}
 .wfx-title-shine{position:absolute;inset:0;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.1) 44%,rgba(255,255,255,.94) 49%,rgba(255,255,255,.2) 54%,transparent 59%) 130% 0/270% 100%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .wfx-flash{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 47%,rgba(255,239,184,.18),rgba(255,239,184,.06) 44%,transparent 72%)}
 @media(prefers-reduced-motion:reduce){.wfx-layer{display:none!important}}
-/* title screen: floating pictures on 3 layers (Claude's layout; Astra's art) */
-.open .o-title{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)} /* the words are on the drawn sign; kept for screen readers */
-.open .o-btn{z-index:10}
-.tfx{position:absolute;inset:0;overflow:hidden;z-index:0;touch-action:manipulation;-webkit-user-select:none;user-select:none;background:var(--sky)}
-.tfx-map,.tfx-mapsvg{position:absolute;left:50%;top:50%;width:max(112vw,199.1vh);height:max(63vw,112vh);transform:translate(-50%,-50%);object-fit:cover;display:block;pointer-events:none;will-change:transform}
-.tfx-mapsvg{opacity:.38}
-.tfx-mapsvg svg{width:100%;height:100%;display:block}
-.tfx-layer{position:absolute;inset:0;pointer-events:none}
-.tfx-b{position:absolute;left:0;top:0;will-change:transform;pointer-events:none;transform-origin:50% 50%}
-.tfx-b>img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 calc(var(--u)*.9) calc(var(--u)*.7) rgba(18,48,92,.22))}
-.tfx-b>img.fb.rgb{mix-blend-mode:multiply;filter:none}
-.tfx-b.bus>img{filter:drop-shadow(0 calc(var(--u)*3) calc(var(--u)*1.6) rgba(18,48,92,.20))}
-/* the title sign: Astra's drawn sign when it is there; until then my sticker-edge words on a shop sign */
-.tfx-sign{position:relative;width:100%;height:100%}
-.tfx-sign>img.art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 calc(var(--u)*1.2) calc(var(--u)*.8) rgba(18,48,92,.28))}
-.tfx-sign.drawn .board,.tfx-sign.drawn .sub{display:none}
-.tfx-sign .board{position:absolute;left:8%;right:8%;top:10%;height:56%;border-radius:calc(var(--u)*3);border:calc(var(--u)*.7) solid var(--ink);box-sizing:border-box;
-  background:repeating-linear-gradient(-35deg,rgba(255,255,255,.28) 0 .25em,transparent .25em .6em),var(--sun);display:grid;place-items:center;
-  box-shadow:0 calc(var(--u)*1.2) 0 rgba(18,48,92,.25)}
-.tfx-sign .board::before,.tfx-sign .board::after{content:"";position:absolute;top:-21%;width:calc(var(--u)*.7);height:21%;background:var(--ink);border-radius:9px}
-.tfx-sign .board::before{left:16%}.tfx-sign .board::after{right:16%}
-.tfx-sign b,.tfx-sign .sub{font-family:var(--display);font-weight:800;line-height:1;white-space:nowrap;paint-order:stroke fill;-webkit-text-stroke:.16em #fff;
-  filter:drop-shadow(0 .06em .04em rgba(18,48,92,.35))}
-.tfx-sign b{color:var(--ink);font-size:calc(var(--sw,60vw)*.135)}
-.tfx-sign .sub{position:absolute;left:0;right:0;top:70%;text-align:center;color:var(--blue);font-size:calc(var(--sw,60vw)*.09)}
-@media (prefers-reduced-motion:reduce){.tfx-map,.tfx-mapsvg,.tfx-b{will-change:auto}}
 /* tactile buttons (Alex 11/18): every button has a thick base, sinks into it when pressed, squashes a little and springs back */
 button,.choice,.house,.spot{-webkit-tap-highlight-color:transparent}
 .choice:active{transform:none}
@@ -402,7 +375,7 @@ main.mapq h1{font-size:clamp(22px,calc(var(--u)*6.6),92px)}
 </div>
 
 <section class="open" id="open" hidden aria-label="Opening page">
-  
+  <img class="o-full" id="ofull" alt="" hidden>
   <h2 class="o-title"><span>Fun Friday</span><span>on a Wednesday</span></h2>
   <button class="o-btn" id="startbtn">Tap to start</button>
 </section>
@@ -1055,137 +1028,6 @@ function checkBill(){
   if(tries===2){r.classList.add('lit');$('hint').hidden=false;$('hint').textContent='Add the cents first. Then add the dollars.'}
 }
 
-/* ---------- title screen: floating pictures (Claude's layout + physics; Astra's art) ----------
-   Full-screen. A faded map drifts very slowly. About 12 pictures, the bus and the title sign float on 3 layers
-   that look the same: things on the same layer bump into each other, things on different layers pass over each other.
-   The play field is one picture-width bigger than the screen on every side, so pictures can drift off and come back.
-   The title sign and the bus sit on the middle layer, are much heavier, and are pulled back home by a soft spring.
-   A tap on a picture gives it a gentle push and a soft pop. Only the green button starts the game.
-   Calm mode (reduced motion): everything stays still in its home spot. */
-const TFX=(()=>{
-  const TD=(window.WARMUP_DIR||'assets/')+'title/';
-  /* sprite: Astra's file first, then a game picture already in assets/ */
-  const ITEMS=[
-    ['pizza','pizza-solid.png'],['burger','cheeseburger-solid.png'],['chowmein','chowmein-solid.png'],['soda','soda-solid.png'],
-    ['bag','shoppingbag.png'],['stopsign','stop/pic-stop-front.webp'],['nuggets','nuggets-solid.png'],['sub','turkeysub-solid.png'],
-    ['teddy','teddy.png'],['apple','title-fallback/apple.png'],['bananas','banana.png'],['aislesign','star.png']];
-  /* home spots for calm mode and the first frame (x,y as parts of the screen; layer 0 back, 1 middle, 2 front) */
-  const HOME=[[.11,.22,0],[.88,.70,0],[.30,.83,2],[.86,.26,2],[.09,.62,1],[.70,.86,1],[.20,.42,2],[.93,.47,0],[.35,.10,0],[.62,.08,1],[.78,.44,2],[.05,.88,0]];
-  let field,bodies=[],raf=0,last=0,W=0,H=0,S=0,running=false,t0=0,map;
-  const rnd=(a,b)=>a+Math.random()*(b-a);
-
-  function img(name,fallback,cls){
-    const im=new Image();im.alt='';im.draggable=false;im.className=cls||'';
-    im.onerror=()=>{if(fallback&&im.dataset.fb!=='1'){im.dataset.fb='1';im.src=(window.WARMUP_DIR||'assets/')+fallback;im.classList.add('fb');}};
-    im.src=TD+name;return im;
-  }
-  function build(){
-    const o=$('open');
-    field=document.createElement('div');field.className='tfx';field.setAttribute('aria-hidden','true');
-    map=img('map-bg.webp',null,'tfx-map');field.appendChild(map);
-    /* until Astra's map is there: the game's own pencil map, faded */
-    map.onerror=()=>{const t=document.getElementById('mapsvg'),d=document.createElement('div');d.className='tfx-mapsvg';if(t)d.appendChild(t.content.cloneNode(true));map.replaceWith(d);map=d};
-    for(let L=0;L<3;L++){const d=document.createElement('div');d.className='tfx-layer';d.style.zIndex=L+1;field.appendChild(d)}
-    const layers=field.querySelectorAll('.tfx-layer');
-    const add=(kind,el,layer,home,mass)=>{const w=document.createElement('div');w.className='tfx-b '+kind;w.appendChild(el);layers[layer].appendChild(w);
-      const b={kind,w,el,layer,hx:home[0],hy:home[1],x:0,y:0,vx:0,vy:0,a:0,va:0,m:mass,ph:rnd(0,6.28),sq:0};bodies.push(b);return b};
-    /* title sign: Astra's drawn sign, or my sticker-edge words on a sign until it is there */
-    const sign=document.createElement('div');sign.className='tfx-sign';
-    const sim=img('title-sign.png',null,'art');sim.onload=()=>sign.classList.add('drawn');sim.onerror=()=>sim.remove();
-    sign.innerHTML='<span class="board"><b>Fun Friday</b></span><span class="sub">on a Wednesday</span>';sign.prepend(sim);
-    add('title',sign,1,[.5,.215],40);
-    add('bus',img('bus.png','title-fallback/bus.png'),1,[.5,.555],18);
-    ITEMS.forEach((it,k)=>add('item',img(it[0]+'.png',it[1]),HOME[k][2],HOME[k],1));
-    o.insertBefore(field,o.firstChild);
-    addEventListener('resize',size);
-    field.addEventListener('pointerdown',tap);
-  }
-  /* sizes come from the screen, so a TV, a laptop and an iPad all look the same */
-  function size(){
-    const oW=W,oH=H;W=innerWidth;H=innerHeight;S=Math.min(W*.105,H*.19);
-    bodies.forEach(b=>{
-      if(b.kind==='title'){b.wd=Math.min(W*.66,H*1.12);b.ht=b.wd/2.55}
-      else if(b.kind==='bus'){b.wd=Math.min(W*.40,H*.70);b.ht=b.wd*.52}
-      else{b.wd=b.ht=S}
-      b.w.style.width=b.wd+'px';b.w.style.height=b.ht+'px';
-      /* collision shape: a row of circles (one for a picture, several for the wide sign and bus) */
-      const n=b.kind==='item'?1:b.kind==='title'?5:4,r=b.kind==='item'?S*.42:b.ht*(b.kind==='title'?.42:.40);
-      b.c=[];for(let k=0;k<n;k++)b.c.push({dx:n===1?0:(k/(n-1)-.5)*(b.wd-2*r),r});
-      if(oW){b.x*=W/oW;b.y*=H/oH;b.vx*=W/oW;b.vy*=H/oH}
-    });
-    if(!oW||calm)home();
-  }
-  function home(){bodies.forEach(b=>{b.x=b.hx*W;b.y=b.hy*H;b.a=0;
-    if(b.kind==='item'){const d=rnd(0,6.28),v=cruise()*rnd(.7,1.1);b.vx=Math.cos(d)*v;b.vy=Math.sin(d)*v;b.a=rnd(-6,6)}});draw()}
-  const cruise=()=>W/20; /* about 20 seconds to cross the screen */
-
-  function step(dt,t){
-    const m=S; /* edge margin = one picture width */
-    for(const b of bodies){
-      if(b.kind==='item'){
-        const v=Math.hypot(b.vx,b.vy),c=cruise();
-        if(v>c){const k=Math.max(c/v,Math.exp(-dt*.9));b.vx*=k;b.vy*=k}          /* after a push, slow back to cruising */
-        else if(v<c*.55){const d=v>1?Math.atan2(b.vy,b.vx):rnd(0,6.28);b.vx+=Math.cos(d)*c*dt*.4;b.vy+=Math.sin(d)*c*dt*.4}
-        /* walls one picture-width outside the screen */
-        const r=S*.5;
-        if(b.x<-m+r&&b.vx<0){b.x=-m+r;b.vx*=-1}if(b.x>W+m-r&&b.vx>0){b.x=W+m-r;b.vx*=-1}
-        if(b.y<-m+r&&b.vy<0){b.y=-m+r;b.vy*=-1}if(b.y>H+m-r&&b.vy>0){b.y=H+m-r;b.vy*=-1}
-      }else{
-        /* heavy things: a soft spring back home (the title firmer than the bus) and a lot of drag */
-        const k=b.kind==='title'?2.2:.9,c=b.kind==='title'?2.4:1.5;
-        b.vx+=(-(b.x-b.hx*W)*k-b.vx*c)*dt;b.vy+=(-(b.y-b.hy*H)*k-b.vy*c)*dt;
-      }
-      /* slight tilt: always eased back toward a small rocking angle, never more than 12 degrees */
-      const rock=b.kind==='item'?Math.sin(t*.5+b.ph)*5:Math.sin(t*.35+b.ph)*1.5;
-      b.va+=((rock-b.a)*1.2-b.va*1.4)*dt;b.a+=b.va*dt;b.a=Math.max(-12,Math.min(12,b.a));
-      b.x+=b.vx*dt;b.y+=b.vy*dt;b.sq=Math.max(0,b.sq-dt*3);
-    }
-    /* bumps: only between things on the same layer */
-    for(let p=0;p<bodies.length;p++)for(let q=p+1;q<bodies.length;q++){
-      const A=bodies[p],B=bodies[q];if(A.layer!==B.layer)continue;
-      for(const ca of A.c)for(const cb of B.c){
-        const ra=A.a*Math.PI/180,rb=B.a*Math.PI/180;
-        const ax=A.x+ca.dx*Math.cos(ra),ay=A.y+ca.dx*Math.sin(ra),bx=B.x+cb.dx*Math.cos(rb),by=B.y+cb.dx*Math.sin(rb);
-        let dx=bx-ax,dy=by-ay,d=Math.hypot(dx,dy);const min=ca.r+cb.r;if(d>=min)continue;
-        if(d<.01){dx=1;dy=0;d=1}const nx=dx/d,ny=dy/d,pen=min-d,ia=1/A.m,ib=1/B.m,s=ia+ib;
-        A.x-=nx*pen*ia/s;A.y-=ny*pen*ia/s;B.x+=nx*pen*ib/s;B.y+=ny*pen*ib/s;
-        const rv=(B.vx-A.vx)*nx+(B.vy-A.vy)*ny;if(rv>=0)continue;
-        const j=-(1+.9)*rv/s;A.vx-=j*nx*ia;A.vy-=j*ny*ia;B.vx+=j*nx*ib;B.vy+=j*ny*ib;
-        /* a bump off-centre gives a little turn */
-        const tx=-ny,ty=nx,spin=((B.vx-A.vx)*tx+(B.vy-A.vy)*ty)/(S||1)*8;A.va-=spin*ia;B.va+=spin*ib;
-        if(A.kind!=='item'||B.kind!=='item'){(A.kind==='item'?A:B).sq=Math.max(.15,(A.kind==='item'?A:B).sq)}
-      }
-    }
-  }
-  function draw(){
-    for(const b of bodies){const s=1+b.sq*.12;
-      b.w.style.transform='translate3d('+(b.x-b.wd/2).toFixed(1)+'px,'+(b.y-b.ht/2).toFixed(1)+'px,0) rotate('+b.a.toFixed(2)+'deg) scale('+s.toFixed(3)+')'}
-    if(map&&map.isConnected&&!calm){const t=(performance.now()-t0)/1000;
-      map.style.transform='translate(-50%,-50%) translate3d('+(Math.sin(t/37)*2.2).toFixed(3)+'%,'+(Math.cos(t/53)*1.8).toFixed(3)+'%,0)'}
-  }
-  function loop(now){if(!running)return;const dt=Math.min(.05,(now-last)/1000||0);last=now;
-    const t=(now-t0)/1000;step(dt/2,t);step(dt/2,t);draw();raf=requestAnimationFrame(loop)}
-  /* a tap on a picture: a gentle push away from the finger, a small squash and a soft pop */
-  function tap(e){
-    const x=e.clientX,y=e.clientY;
-    for(let L=2;L>=0;L--)for(const b of bodies){if(b.layer!==L)continue;
-      const ra=b.a*Math.PI/180;
-      const hit=b.c.some(c=>Math.hypot(x-(b.x+c.dx*Math.cos(ra)),y-(b.y+c.dx*Math.sin(ra)))<c.r*1.15);
-      if(!hit)continue;
-      let dx=b.x-x,dy=b.y-y,d=Math.hypot(dx,dy);if(d<4){const a=rnd(0,6.28);dx=Math.cos(a);dy=Math.sin(a);d=1}
-      const push=cruise()*(b.kind==='item'?3.2:5)/Math.sqrt(b.m);
-      b.vx+=dx/d*push;b.vy+=dy/d*push;b.va+=rnd(-1,1)*(b.kind==='item'?40:6);b.sq=1;
-      pop(b.kind);return;
-    }
-  }
-  function pop(kind){try{const f=kind==='item'?rnd(560,760):kind==='bus'?300:380;note(f,0,.09,{vol:.12,to:f*1.6});note(f*2,.02,.05,{vol:.04})}catch(e){}}
-  return{
-    show(){if(!field)build();size();if(calm){home();return}
-      if(!running){running=true;last=performance.now();t0=t0||last;raf=requestAnimationFrame(loop)}},
-    hide(){running=false;cancelAnimationFrame(raf)}
-  };
-})();
-
 /* ---------- tactile buttons (Alex 11/18): a chunky plastic click on press, a lighter click on release ---------- */
 SFX.press=()=>{note(140,0,.05,{type:'triangle',vol:.22,to:70});hiss(0,.025,{vol:.16,from:2500,to:5200,q:1.4});note(1900,0,.018,{type:'square',vol:.035})};
 SFX.release=()=>{hiss(0,.02,{vol:.09,from:3200,to:6000,q:1.6});note(2600,0,.015,{type:'square',vol:.025});note(240,0,.03,{type:'triangle',vol:.07,to:180})};
@@ -1202,7 +1044,7 @@ SFX.release=()=>{hiss(0,.02,{vol:.09,from:3200,to:6000,q:1.6});note(2600,0,.015,
 /* Opening page. It shows once, before question 1. The first tap starts the game and wakes the sound (a browser stays silent until someone taps). */
 let opened=false;
 function showOpen(){
-  TFX.show();
+  const f=$('ofull');if(window.WARMUP_OPENING!==false&&!f.dataset.tried){f.dataset.tried=1;f.onload=()=>{f.hidden=false;$('open').classList.add('art')};f.onerror=()=>{if(!f.dataset.draft){f.dataset.draft=1;f.onload=()=>{f.hidden=false;$('open').classList.add('art','draft')};f.src=DIR+'opening-draft.webp'}else f.hidden=true};f.src=DIR+'opening-full.webp'}
   opened=false;$('startbtn').disabled=false;$('open').classList.remove('leave');$('open').hidden=false;
 }
 /* Only the button starts (Astra's opening design). The tap also wakes the sound: a browser stays silent until someone taps. */
@@ -1210,7 +1052,7 @@ $('startbtn').onclick=()=>{
   if(opened)return;opened=true;$('startbtn').disabled=true;const o=$('open');
   try{SFX.chime();SFX.honk()}catch(e){}
   o.classList.add('leave');
-  setTimeout(()=>{o.hidden=true;o.classList.remove('leave');TFX.hide();render();sayQ(SCREENS[i])},calm?0:220);
+  setTimeout(()=>{o.hidden=true;o.classList.remove('leave');render();sayQ(SCREENS[i])},calm?0:220);
 };
 function go(n){const ws=$('winstage');if(ws)WINFX.stop(ws);if(n<0&&i===0){hush();showOpen();return}if(n<0||n>=SCREENS.length)return;i=n;easy=false;ent={d:'',c:''};tries=0;billDone=false;$('easy').setAttribute('aria-pressed','false');render();if(SCREENS[i].end)party();else SFX.whoosh();sayQ(SCREENS[i])}
 $('next').onclick=()=>go(i+1);
